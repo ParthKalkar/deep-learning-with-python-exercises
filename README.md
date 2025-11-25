@@ -5,9 +5,11 @@ This repository contains implementations of exercises from the book "Deep Learni
 ## Setup
 
 1. Ensure Python 3.8+ is installed.
-2. Create a virtual environment: `python -m venv .venv`
-3. Activate it: `source .venv/bin/activate` (on macOS/Linux)
-4. Install dependencies: `pip install -r requirements.txt`
+2. Clone this repository: `git clone <your-repo-url>`
+3. Navigate to the directory: `cd deep_learning_with_python`
+4. Create a virtual environment: `python -m venv .venv`
+5. Activate it: `source .venv/bin/activate` (on macOS/Linux) or `.venv\Scripts\activate` (on Windows)
+6. Install dependencies: `pip install -r requirements.txt`
 
 ## Structure
 
@@ -24,9 +26,22 @@ Each chapter has Python files implementing the tasks. Run them with `python chap
 
 Note: Some tasks require downloading datasets (e.g., MNIST, IMDB) which TensorFlow/Keras handles automatically. For others like Dogs vs. Cats or Jena weather, update paths to local files.
 
-## Requirements
+For MPS optimization on macOS (Apple Silicon), add this at the top of scripts:
 
-- tensorflow
-- numpy
-- matplotlib
-- scikit-learn
+```python
+import os
+os.environ['TF_ENABLE_MPS'] = '1'
+import tensorflow as tf
+```
+
+## Results
+
+See `results.md` for sample outputs from running key tasks.
+
+## Contributing
+
+Feel free to submit issues or pull requests for improvements.
+
+## License
+
+This project is for educational purposes. Refer to the book for licensing.# Chapter 2 completed
