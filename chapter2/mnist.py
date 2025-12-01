@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # Task: Building the Network Architecture
 model = tf.keras.Sequential([
-    layers.Flatten(input_shape=(28, 28)),
+    layers.Flatten(),
     layers.Dense(512, activation='relu'),
     layers.Dense(10, activation='softmax')
 ])
